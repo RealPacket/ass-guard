@@ -12,7 +12,7 @@ fn syscall_hook<D>(emu: &mut Unicorn<D>) {
 
     // Emulate the system call or perform any other actions here
     // For example, we can set the return value to 0
-    emu.reg_write(RegisterX86::RAX, 0).unwrap();
+    emu.reg_write(RegisterX86::RCX, 0).unwrap();
     // TODO: actually do the syscall
 }
 
